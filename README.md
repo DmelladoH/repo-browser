@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Exercise
+## Exercise
 
 Queremos crear una aplicación con NextJS con Typescript (strict) que tenga las siguientes funcionalidades:
 
