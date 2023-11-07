@@ -11,6 +11,7 @@ import {
 import { Repo } from "../types";
 import Link from "next/link";
 import { MAX_PAGE } from "@/constants";
+import TableRepo from "@/ui/repo-table";
 
 interface Props {
   searchParams: { [key: string]: string | string[] | undefined };
@@ -27,26 +28,7 @@ async function Repos({ searchParams }: Props) {
   return (
     <main>
       <h1>Repos</h1>
-      <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>ID</TableCell>
-              <TableCell>Name</TableCell>
-              <TableCell>Full Name</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {repos.map((repo: Repo) => (
-              <TableRow key={repo.id}>
-                <TableCell>{repo.id}</TableCell>
-                <TableCell>{repo.name}</TableCell>
-                <TableCell>{repo.full_name}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </TableContainer>
+      <TableRepo repos={repos} />
       <section>
         <Link href={`/repos?name=${name}&page=${page > 1 ? page - 1 : 1}`}>
           <p>previous</p>
