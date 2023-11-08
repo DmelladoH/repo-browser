@@ -17,9 +17,6 @@ dependencies:
   '@mui/x-data-grid':
     specifier: ^6.18.0
     version: 6.18.0(@mui/material@5.14.16)(@mui/system@5.14.16)(@types/react@18.2.35)(react-dom@18.2.0)(react@18.2.0)
-  '@octokit/core':
-    specifier: ^5.0.1
-    version: 5.0.1
   next:
     specifier: 14.0.1
     version: 14.0.1(react-dom@18.2.0)(react@18.2.0)

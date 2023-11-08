@@ -1,17 +1,10 @@
 import { getRepos } from "@/lib/getRepos";
-import {
-  TableContainer,
-  Paper,
-  Table,
-  TableHead,
-  TableRow,
-  TableCell,
-  TableBody,
-} from "@mui/material";
-import { Repo } from "../types";
 import Link from "next/link";
 import { MAX_PAGE } from "@/constants";
-import TableRepo from "@/ui/repo-table";
+import TableRepo from "@/app/ui/repo-table";
+import Search from "@/app/ui/search";
+import Action from "../ui/action";
+import Header from "../ui/header";
 
 interface Props {
   searchParams: { [key: string]: string | string[] | undefined };
@@ -24,19 +17,30 @@ async function Repos({ searchParams }: Props) {
 
   const repos = await getRepos({ search: name, page: page, limit: MAX_PAGE });
 
-  console.log(repos[0].name);
+  if (repos.length === 0) {
+    return (
+      <main>
+        <div className="flex justify-center m-7">
+          <p>Not Found</p>
+        </div>
+      </main>
+    );
+  }
+
   return (
-    <main>
-      <h1>Repos</h1>
+    <main className="m-4">
       <TableRepo repos={repos} />
-      <section>
-        <Link href={`/repos?name=${name}&page=${page > 1 ? page - 1 : 1}`}>
+      <footer className="flex gap-8 justify-center  m-5">
+        <Action href={`/repos?name=${name}&page=${page > 1 ? page - 1 : 1}`}>
           <p>previous</p>
-        </Link>
-        <Link href={`/repos?name=${name}&page=${page + 1}`}>
+        </Action>
+        <div className="flex items-center justify-center">
+          <p>{page}</p>
+        </div>
+        <Action href={`/repos?name=${name}&page=${page + 1}`}>
           <p>next</p>
-        </Link>
-      </section>
+        </Action>
+      </footer>
     </main>
   );
 }

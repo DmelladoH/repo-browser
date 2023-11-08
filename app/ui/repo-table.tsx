@@ -8,7 +8,7 @@ import {
   TableBody,
   TablePagination,
 } from "@mui/material";
-import { Repo } from "../app/types";
+import { Repo } from "../types";
 
 function TableRepo({ repos }: any) {
   return (
