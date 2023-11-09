@@ -9,9 +9,9 @@ export interface Repo {
   description: string;
   fork: boolean;
   url: string;
-  created_at: String;
-  updated_at: String;
-  pushed_at: String;
+  created_at: string;
+  updated_at: string;
+  pushed_at: string;
   homepage: string;
   size: number;
   stargazers_count: number;
