@@ -9,7 +9,7 @@ export default async function Home() {
   // console.log(repos);
   return (
     <main className="flex min-h-screen flex-col items-center p-24">
-      <p>start searching your favorite github repositories</p>
+      <p>Start searching your favorite github repositories</p>
     </main>
   );
 }
