@@ -20,17 +20,13 @@ function TableRepo({ repos }: any) {
         <Table>
           <TableHead>
             <TableRow>
-              {/* <div> */}
               <TableCell>User</TableCell>
               <TableCell>Repo Name</TableCell>
               <TableCell>Description</TableCell>
               <TableCell>Created at</TableCell>
               <TableCell>Updated at</TableCell>
-              {/* <TableCell>Topics</TableCell> */}
               <TableCell>Language</TableCell>
               <TableCell>Stars</TableCell>
-
-              {/* </div> */}
             </TableRow>
           </TableHead>
           <TableBody>

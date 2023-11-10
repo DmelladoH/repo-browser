@@ -1,10 +1,7 @@
 import { getRepos } from "@/lib/getRepos";
-import Link from "next/link";
 import { MAX_PAGE } from "@/constants";
 import TableRepo from "@/app/ui/repo-table";
-import Search from "@/app/ui/search";
 import Action from "../ui/action";
-import Header from "../ui/header";
 
 interface Props {
   searchParams: { [key: string]: string | string[] | undefined };

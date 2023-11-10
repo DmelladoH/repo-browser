@@ -15,7 +15,6 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // const bg = `bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%`;
   const bg = `antialiased text-slate-300 bg-slate-900`;
   return (
     <html lang="en">

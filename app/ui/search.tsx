@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-function Search({ defName = "react" }) {
+function Search() {
   const router = useRouter();
   const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -19,7 +19,6 @@ function Search({ defName = "react" }) {
             name="search"
             type="text"
             placeholder="tetris"
-            // defaultValue={defName}
             className="w-96 border p-2 border-gray-600 rounded-tl-xl rounded-bl-xl"
           />
           <button
