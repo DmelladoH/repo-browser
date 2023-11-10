@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Input from "./input";
 
 function Search({ defName = "react" }) {
   const router = useRouter();

@@ -1,5 +1,4 @@
 import { TableCell } from "@mui/material";
-import Link from "next/link";
 
 interface Props {
   link: string;
